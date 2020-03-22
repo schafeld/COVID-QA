@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Row, Col, Form, AutoComplete } from 'antd';
 import styles from './styles.module.scss';
 import logoHackathon from 'assets/images/logo-wirs-vs-virus-projekt-black-font.svg';
+import { Translation } from 'react-i18next';
 
 class SearchForm extends PureComponent {
   static propTypes = {
@@ -74,7 +75,9 @@ class SearchForm extends PureComponent {
         <Row gutter={32}>
           <Col>
             <div className={styles.poweredBy}>
-              <p className="made-by">Made with <span className="heart">❤</span> and <a href="https://github.com/deepset-ai/haystack">open source</a></p>
+              
+              <p className="made-by">
+                <Translation>{ t => <span>{t('madeWith')}</span> }</Translation> <span className="heart">❤</span> <Translation>{ t => <span>{t('and')}</span> }</Translation>  <a href="https://github.com/deepset-ai/haystack"><Translation>{ t => <span>{t('openSource')}</span> }</Translation> </a></p>
               <div className="project-logo">
                 <a href="https://wirvsvirushackathon.org/" target="_blank" rel="noopener noreferrer">
                   <img src={logoHackathon} alt="Logo WirVsVirus Hackathon" />
