@@ -18,14 +18,14 @@ i18n.use(LanguageDetector).init({
     de: {
       translations: {
         informalGreeting: "Hallöle!",
-        madeWith: "Erstellt mit",
+        madeWith: "Gemacht mit",
         and: "und",
         openSource: "Open Source",
         callToAction: "Stellen Sie eine Frage zu Covid-19 (Corona-Virus)"
       }
     }
   },
-  fallbackLng: "de", // language is set here
+  fallbackLng: "en",
   debug: true,
 
   // have a common namespace used around the full app
